@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Kirchbergerknorr_PDFCreator>
+      <version>0.0.1</version>
+    </Kirchbergerknorr_PDFCreator>
+  </modules>
+  <global>
+    <helpers>
+      <pdfcreator>
+        <class>Kirchbergerknorr_PDFCreator_Helper</class>
+      </pdfcreator>
+    </helpers>
+	<blocks>
+	  <pdfcreator>
+		<class>Kirchbergerknorr_PDFCreator_Block</class>
+	  </pdfcreator>
+	</blocks>
+    <models>
+      <pdfcreator>
+          <class>Kirchbergerknorr_PDFCreator_Model</class>
+      </pdfcreator>
+    </models>
+  </global>
+
+</config> 

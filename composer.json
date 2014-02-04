@@ -1,0 +1,15 @@
+{
+    "name": "kirchbergerknorr/pdfcreator",
+    "description": "Kirchbergerknorr PDFCreator",
+    "type": "magento-module",
+    "license":"OSL-3.0",
+    "authors": [
+        {
+            "name": "Benedikt Volkmer",
+            "email": "bv@kirchbergerknorr.de"
+        }
+    ],
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

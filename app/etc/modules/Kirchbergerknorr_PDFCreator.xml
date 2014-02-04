@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Kirchbergerknorr_PDFCreator>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Kirchbergerknorr_PDFCreator>
+    </modules>
+</config>
