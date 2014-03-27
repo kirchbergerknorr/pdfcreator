@@ -1,0 +1,37 @@
+.onepage {border: 1px solid red;}
+.pdfpage {
+    height: 270mm;
+    width: 184mm;
+    border: 1px solid black;
+}
+.header {
+    height: 74mm;
+    background-color: red;
+}
+
+.order {
+    padding: 15px;
+    height: 142mm;
+    background-color: #808080;
+}
+
+
+.footer {background-color: green;}
+
+#falz1{
+    position:absolute;
+    top: 87mm;
+    left: 0mm;
+    width: 10mm;
+    height: 0.2mm;
+    background-color: darkgrey;
+}
+#falz2{
+    position:absolute;
+    top: 192mm;
+    left: 0mm;
+    width: 10mm;
+    height: 0.2mm;
+    background-color: darkgrey;
+}
+

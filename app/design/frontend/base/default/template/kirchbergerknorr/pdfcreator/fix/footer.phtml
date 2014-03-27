@@ -1,0 +1,50 @@
+<?php
+    $retoure = $this->loadRetoure($this->getId());
+    $fname = $retoure->getFirstname();
+    $lname = $retoure->getLastname();
+    $email = $retoure->getEmail();
+
+    $street = $retoure->getStreet();
+    $code = $retoure->getZip();
+    $city = $retoure->getCity();
+    $country = $retoure->getCountry();
+    $company = $retoure->getCompany();
+    $created = $retoure->getCreatedAt();
+
+    $items = $retoure->getItems();
+
+    $logo = $this->getSkinUrl('images/logo_print.png');
+    preg_match("/front.*/", $logo, $substring);
+?>
+<div class="pdfpage">
+    <div class="footer">
+        <div class="impressum">
+            <h4><?=Mage::getStoreConfig('general/imprint/shop_name');?></h4>
+            <div class="bundle">
+                <p> Sitz der Gesellschaft: <?=Mage::getStoreConfig('general/imprint/street');?>, D <?=Mage::getStoreConfig('general/imprint/zip');?>  <?=Mage::getStoreConfig('general/imprint/city');?></p>
+            </div>
+            <div class="bundle">
+                <p> Handelsregister:</p>
+                <p> Steuernummer:</p>
+            </div>
+            <div class="bundle">
+                <p> Haftender gesellschafter:</p>
+                <p> Steuernummer:</p>
+            </div>
+        </div>
+        <div class="spacer"></div>
+        <div class="bank">
+            <h4>Commerzbank</h4>
+            <div class="bundle">
+                <p> BLZ:</p>
+                <p> Konto:</p>
+                <p> IBAN:</p>
+                <p> BIC:</p>
+            </div>
+        </div>
+        <div style="clear:both"></div>
+    </div>
+</div>
+
+<div id="falz1"></div>
+<div id="falz2"></div>

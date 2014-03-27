@@ -1,0 +1,52 @@
+.pdfpage {
+    height: 270mm;
+    width: 184mm;
+}
+.header {
+    height: 84mm;
+}
+.header .logo{ margin-bottom: 20px;}
+.header .cu-address{width: 52%; float: left;}
+.cu-address .data{margin: 24px 0 0 40px;}
+.shop-address .data{margin-top: 36px;}
+.data .bundle {margin-bottom: 10px;}
+.cu-address p {margin: 0; line-height: 1.4em; font-size: 18px;}
+.shop-address p {margin: 0; line-height: 1.4em; font-size: 16px;}
+.cu-address .crumb {font-size: 10px; text-decoration: underline; margin-left: 40px;}
+.header .shop-address{width: 48%; float: left;}
+
+.order {
+    padding: 15px;
+    height: 142mm;
+}
+.order table {width: 100%; border-spacing: 0; border-collapse: separate;}
+#thead {background-color: #cfcfcf;}
+.td-thead{font-size: 18px;}
+.tr-body {border-bottom: #a9a9a9;}
+.order table tbody tr td {padding-left: 5px;}
+.order h3 { margin: 0 0 15px 0; font-size: 22px;}
+
+.footer {font-size: 12px; padding: 15px;
+    border-top: 1px solid #000000;}
+.footer .bundle {margin-bottom: 5px;}
+.footer p {margin: 0;}
+.footer h4 {margin:0 0 5px 0;}
+.footer .impressum, .footer .bank {width: 50%; float:left;}
+
+#falz1{
+    position:absolute;
+    top: 87mm;
+    left: 5mm;
+    width: 10mm;
+    height: 0.5mm;
+    background-color: darkgrey;
+}
+#falz2{
+    position:absolute;
+    top: 192mm;
+    left: 5mm;
+    width: 10mm;
+    height: 0.5mm;
+    background-color: darkgrey;
+}
+

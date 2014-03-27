@@ -1,4 +1,4 @@
-Kirchbergerknorr PDFCreator 1.0.0
+Kirchbergerknorr PDFCreator 1.0.1
 ======================================
 
 Kirchbergerknorr PDFCreator Module
@@ -6,6 +6,9 @@ Kirchbergerknorr PDFCreator Module
 
 Version Log
 -----------
+
+**1.0.1**
+- added KVA Creation for Tec-Repair
 
 **1.0.0**
 - Initial commit

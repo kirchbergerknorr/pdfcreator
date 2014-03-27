@@ -1,0 +1,39 @@
+<?php
+    $item = $this->getItem();
+    $translation = array(
+        'mid' => $this->__('Manufacturer id'),
+        'name' => $this->__('Name'),
+        'order_no'=> $this->__('Order No.'),
+        'invoice_no'=> $this->__('Invoice No.'),
+        'delivery_no'=> $this->__('Delivery No.'),
+        'return_id'=> $this->__('Return id'),
+        'article_group'=> $this->__('Article Group'),
+        'serial_number'=> $this->__('Serial Number'),
+        'failure_desc1'=> $this->__('Failure Description (Panel)'),
+        'failure_desc2'=> $this->__('Failure Description (PSU/SSB/Accessories)'),
+        'defect_cond'=> $this->__('Defect Condition'),
+        'reason'=> $this->__('Manufacturer id'),
+        'qty'=> $this->__('Quantity'),
+        'option'=> $this->__('Option'),
+        'comment'=> $this->__('Comment')
+    )
+?>
+<div class="pdfpage">
+    <div class="order">
+        <h3><?=$this->__('Return details for product %s',$item['mid'])?></h3>
+        <table style="padding: 20px;">
+        <?php
+
+        foreach($item as $key => $value){
+            if(isset($translation[$key]))
+            {
+                echo '<tr><td width="50%">'.$translation[$key].'</td><td>'.$value.'</td></tr>';
+            }
+        }
+        ?>
+        </table>
+    </div>
+</div>
+
+<div id="falz1"></div>
+<div id="falz2"></div>

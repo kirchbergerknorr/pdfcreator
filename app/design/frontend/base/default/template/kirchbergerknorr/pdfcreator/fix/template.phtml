@@ -1,0 +1,47 @@
+<?php
+    $retoure = $this->loadRetoure($this->getId());
+    $fname = $retoure->getFirstname();
+    $lname = $retoure->getLastname();
+    $email = $retoure->getEmail();
+
+    $street = $retoure->getStreet();
+    $code = $retoure->getZip();
+    $city = $retoure->getCity();
+    $country = $retoure->getCountry();
+    $company = $retoure->getCompany();
+    $created = $retoure->getCreatedAt();
+
+    $items = $retoure->getItems();
+
+    $logo = $this->getSkinUrl('images/logo_print.png');
+    preg_match("/front.*/", $logo, $substring);
+
+?>
+<div class="pdfpage">
+    <div class="order">
+        <h3><?=$this->__('Returns receipt for #%s',$this->getId())?> - <?=$this->__('created at %s', $created)?></h3>
+        <table cellspacing="0">
+            <thead>
+                <tr id="thead">
+                    <td class="td-thead"><?=$this->__('Manufacturer no')?>.</td>
+                    <td class="td-thead"><?=$this->__('Name')?></td>
+                    <td class="td-thead"><?=$this->__('Quantity')?></td>
+                    <td class="td-thead"><?=$this->__('Reason')?></td>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $reasons = array('0'=>'Dead on arrival (inoperable)','1'=>'Wrong part delivered','2'=>'Delivered too late','3'=>'Damaged during transport', '4'=>'Return Defect Part \'R-Part\'', '5'=>'Other');
+                $options = array('0'=>'Replacement','1'=>'Refund');
+                foreach($items as $item){
+                    echo '<tr class="tr-body"><td colspan=1 id="'.$item['mid'].'">'.$item['mid'].'</td><td id="'.$item['name'].'">'.$item['name'].'</td><td class="qty" id="'.$item['qty'].'">'.$item['qty'].'</td><td>'.$reasons[$item['reason']].'</td></tr>';
+                }
+                ?>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+<div id="falz1"></div>
+<div id="falz2"></div>

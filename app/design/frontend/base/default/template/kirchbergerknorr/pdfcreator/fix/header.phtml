@@ -1,0 +1,47 @@
+<?php
+    $retoure = $this->loadRetoure($this->getId());
+    $fname = $retoure->getFirstname();
+    $lname = $retoure->getLastname();
+    $email = $retoure->getEmail();
+
+    $street = $retoure->getStreet();
+    $code = $retoure->getZip();
+    $city = $retoure->getCity();
+    $country = $retoure->getCountry();
+    $company = $retoure->getCompany();
+    $created = $retoure->getCreatedAt();
+
+    $items = $retoure->getItems();
+
+    $logo = $this->getSkinUrl('images/logo_print.png');
+    preg_match("/front.*/", $logo, $substring);
+?>
+<div class="pdfpage">
+    <div class="header">
+        <div class="logo"><img src="<?=Mage::getBaseDir('skin').'/'.$substring[0] ?>"/></div>
+        <div class="cu-address">
+            <p class="crumb"><?=Mage::getStoreConfig('general/imprint/shop_name');?> - <?=Mage::getStoreConfig('general/imprint/street');?> - <?=Mage::getStoreConfig('general/imprint/zip');?> - <?=Mage::getStoreConfig('general/imprint/city');?></p>
+            <div class="data">
+                <p><?=$fname?> <?=$lname?></p>
+                <p><?=$company?></p>
+                <p><?=$street?></p>
+                <p><?=$code?></p>
+                <p><?=$city?></p>
+                <p><?=$country?></p>
+            </div>
+        </div>
+        <div class="shop-address">
+            <div class="data">
+                <div class="bundle">
+                    <p><?=Mage::getStoreConfig('general/imprint/street');?></p>
+                    <p>D - <?=Mage::getStoreConfig('general/imprint/zip');?> <?=Mage::getStoreConfig('general/imprint/city');?></p>
+                </div>
+                <div class="bundle">
+                    <p><?=$this->__('Internet')?>: <?=Mage::getBaseUrl('web', false)?></p>
+                    <p><?=$this->__('Email')?>: <?=Mage::getStoreConfig('general/imprint/email');?></p>
+                </div>
+            </div>
+        </div>
+        <div style="clear:both"></div>
+    </div>
+</div>

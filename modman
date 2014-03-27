@@ -1,2 +1,4 @@
-app/code/local/Kirchbergerknorr/PDFCreator/*		app/code/local/Kirchbergerknorr/PDFCreator/
-app/etc/modules/*								app/etc/modules/
+app/code/local/Kirchbergerknorr/PDFCreator/*							app/code/local/Kirchbergerknorr/PDFCreator/
+app/etc/modules/*														app/etc/modules/
+shell/*																	shell/
+app/design/frontend/base/default/template/kirchbergerknorr/pdfcreator/*	app/design/frontend/base/default/template/kirchbergerknorr/pdfcreator

@@ -1,0 +1,35 @@
+.pdfpage {
+    height: 270mm;
+    width: 184mm;
+    border: 1px solid black;
+}
+.header {
+    height: 84mm;
+    border-bottom: 1px solid red;
+}
+.header .logo{}
+.header .cu-address{width: 50%; height: 100%; float: left;}
+.header .shop-address{width: 50%; height: 100%; float: left;}
+
+.order{
+    height: 162mm;
+    border-bottom: 1px solid green;
+}
+
+#falz1{
+    position:absolute;
+    top: 87mm;
+    left: 5mm;
+    width: 10mm;
+    height: 0.5mm;
+    background-color: darkgrey;
+}
+#falz2{
+    position:absolute;
+    top: 192mm;
+    left: 5mm;
+    width: 10mm;
+    height: 0.5mm;
+    background-color: darkgrey;
+}
+
